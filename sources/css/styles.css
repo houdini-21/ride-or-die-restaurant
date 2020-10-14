@@ -9,6 +9,8 @@
 .navbar {
   overflow: hidden;
   background: rgba(21, 21, 21, 0.5);
+  position: fixed;
+  width: 100%;
 }
 
 .logo {
@@ -24,7 +26,8 @@
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 2vh;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .navbar a:hover {
@@ -33,16 +36,58 @@
 }
 
 .banner-principal {
-    background-image: url(../img/banner-principal.jpg);
-    background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner-principal {
+  background-image: url(../img/banner-principal.jpg);
+  margin: 0;
+  min-height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.banner-text-box {
+  margin-left: 5%;
 }
 
 .title-banner {
-  font-size: 12vh;
+  font-size: 80px;
   font-weight: 400;
+  color: #fefefe;
 }
 
 .subtitle-banner {
-  font-size: 5vh;
+  font-size: 30px;
   font-weight: 400;
+  color: #fefefe;
+}
+
+.button-banner {
+  height: 40px;
+  width: 20%;
+  border: 2px solid #ffffff;
+  background-color: rgba(255, 255, 255, 0);
+  box-sizing: border-box;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 400;
+  color: #fafafa;
+  font-size: 15px;
+  font-weight: 500;
+  background-position: center;
+  transition: background 0.4s;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.button-banner:hover {
+  border: 2px solid #ffffff;
+  background-color: #ffffff;
+  color: #151515;
+  transition: 225ms;
 }
