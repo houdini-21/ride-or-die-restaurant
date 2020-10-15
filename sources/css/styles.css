@@ -92,7 +92,6 @@
   box-sizing: border-box;
   border-radius: 5px;
   text-align: center;
-  font-weight: 400;
   color: var(--secondary-color);
   font-size: 15px;
   font-weight: 500;
@@ -109,9 +108,13 @@
   transition: 225ms;
 }
 
+.title-category,
+.title-combos {
+  margin-left: 5%;
+}
+
 .container-category-combos {
   margin: 20px 0px;
-  margin-left: 5%;
 }
 
 .title-category,
@@ -134,10 +137,6 @@
   flex-direction: row;
 }
 
-.cards-category-box {
-    margin: 15px 0px;
-}
-
 .card-category {
   display: flex;
   justify-content: center;
@@ -151,7 +150,7 @@
   background: #fefefe;
   border-radius: 10px;
   margin: 12px;
-  filter: drop-shadow(0px 20px 30px rgba(141, 139, 139, 0.3));
+  box-shadow: 0px 20px 30px rgba(141, 139, 139, 0.3);
 }
 
 .icon-card {
@@ -163,4 +162,163 @@
   font-size: 17px;
   color: var(--third-color);
   font-weight: 500;
+}
+
+.cards-combos-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card-combos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.card-combos {
+  width: 420px;
+  height: 250px;
+  background-color: var(--secondary-color);
+  margin: 15px;
+  border-radius: 15px;
+  box-shadow: 0px 20px 30px rgba(141, 139, 139, 0.3);
+}
+
+.card-combos-description {
+  margin: 0px 0px 0px 10px;
+}
+
+.card-combos-description-title {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 500;
+  color: var(--third-color);
+}
+
+.card-combos-description-subtitle {
+  font-size: 13px;
+  font-weight: 500;
+  color: #8a8a8a;
+  margin: 5px 0px;
+}
+
+.card-combos-description-include {
+  list-style: none;
+  margin: 5px 0px;
+}
+
+.card-combos-description-include li {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--third-color);
+}
+
+.card-combos-image {
+  width: 179px;
+  height: 250px;
+}
+
+.image-combos {
+  width: 180px;
+  height: 250px;
+  background-image: url(../img/combo-1.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.btn-combos-add-car {
+  width: 90%;
+  height: 30px;
+  background-color: var(--principal-color);
+  border-radius: 5px;
+  border: none;
+  text-align: center;
+  color: var(--secondary-color);
+  font-size: 13px;
+  font-weight: 500;
+  background-position: center;
+  transition: background 0.4s;
+  cursor: pointer;
+  margin: 5px 0px;
+}
+
+.about-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-name {
+  background-color: var(--principal-color);
+  height: 300px;
+}
+
+.about-name-title {
+  font-weight: 600;
+  font-size: 40px;
+  color: var(--secondary-color);
+}
+
+.about-name-subtitle {
+  font-weight: normal;
+  font-size: 17px;
+  width: 70%;
+  color: var(--secondary-color);
+}
+
+.about-our-founder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.about-our-founder-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-our-founder-box {
+  margin: 0px 50px;
+}
+
+.about-our-founder-title {
+  font-weight: normal;
+  font-size: 40px;
+  color: var(--principal-color);
+}
+
+.about-our-founder-subtitle {
+  font-weight: normal;
+  font-size: 17px;
+  color: var(--third-color);
+}
+
+.about-our-founder-description {
+  font-weight: 300;
+  font-size: 12px;
+  color: var(--third-color);
+  margin: 10px 0px;
+  width: 596px;
+}
+
+.about-our-founder-picture {
+  width: 655px;
+  height: 470px;
+  background-image: url(../img/founder-pic.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.about-our-fouder-firm-founder {
+  align-self: flex-start;
+  width: 40%;
+  margin: 10px 0px;
 }
