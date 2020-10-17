@@ -6,6 +6,12 @@
     width: 45px;
   }
 
+  .shopping-cart {
+    margin-right: 10%;
+    width: 30px;
+    height: 30px;
+  }
+
   .navbar a {
     float: right;
     color: var(--secondary-color);
