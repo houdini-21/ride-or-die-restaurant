@@ -20,7 +20,9 @@
   overflow: hidden;
   background: rgba(21, 21, 21, 0.5);
   position: fixed;
+  top: 0;
   width: 100%;
+  z-index: 9999;
 }
 
 .logo {
@@ -311,12 +313,14 @@
   width: 596px;
 }
 
-.about-our-founder-picture {
-  width: 655px;
-  height: 470px;
-  background-image: url(../img/founder-pic.jpg);
-  background-size: cover;
-  background-position: center;
+@media only screen and (min-width: 990px) {
+  .about-our-founder-picture {
+    width: 655px;
+    height: 470px;
+    background-image: url(../img/founder-pic.jpg);
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 .about-our-fouder-firm-founder {
@@ -389,25 +393,41 @@
   flex-direction: column;
 }
 
-.menu-card {
-  width: 25%;
+.card-scafold {
+  width: 330px;
   box-shadow: 0px 20px 30px rgba(141, 139, 139, 0.3);
   border-radius: 10px;
   margin: 15px;
 }
 
-.img-menu-card {
+.img-card {
   width: 100%;
   border-radius: 10px 10px 0px 0px;
 }
 
-.menu-card-picture {
+.card-picture {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
-.menu-card-info {
+.card-price {
+  border-radius: 10px 0px 0px 0px;
+  padding: 10px 15px;
+  background-color: #20bea1;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.card-price-p {
+  color: var(--secondary-color);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.card-info {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -415,29 +435,29 @@
   flex-wrap: wrap;
 }
 
-.menu-card-info {
+.card-info {
   margin: 20px;
 }
 
-.menu-card-title {
+.card-title {
   margin: 5px 0px;
   font-size: 18px;
   font-weight: 600;
   color: var(--third-color);
 }
 
-.menu-card-description {
+.card-description {
   text-align: justify;
   font-size: 14px;
   font-weight: 500;
   color: #8a8a8a;
 }
 
-.menu-card-description {
+.card-description {
   margin: 5px 0px;
 }
 
-.btn-menu-add-car {
+.card-btn-add-car {
   width: 80%;
   height: 40px;
   background-color: var(--principal-color);
