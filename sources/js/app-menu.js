@@ -12,12 +12,7 @@ import {
 import { readDataLocalStorage, saveDataLocalStorage } from "./localstorage.js";
 
 window.addEventListener("load", () => {
-  const categorywillgenerate =
-    readDataLocalStorage("menu-selected") || "hamburguer";
-  const category = selectedCategory(categorywillgenerate);
-  category.forEach((data) => {
-    generateCardsMenu(data);
-  });
+  updatecards();
 });
 
 const cardscategory = document.querySelectorAll(".card-icon-category");
@@ -25,7 +20,7 @@ const cardscategory = document.querySelectorAll(".card-icon-category");
 cardscategory.forEach((card) => {
   card.addEventListener("click", () => {
     saveDataLocalStorage("menu-selected", card.id);
-    window.location = "./menu.html";
+    updatecards();
   });
 });
 
@@ -58,4 +53,29 @@ const selectedCategory = (category) => {
       break;
   }
   return option;
+};
+let oldDiv = "hamburguer";
+
+const changestate = (div) => {
+  document.getElementById(oldDiv).classList.remove("active");
+  document.getElementById(div).classList.add("active");
+  oldDiv = div;
+};
+
+const clearDiv = (id) => {
+  const div = document.getElementById(id);
+  while (div.firstChild) {
+    div.removeChild(div.firstChild);
+  }
+};
+
+const updatecards = () => {
+  const categorywillgenerate =
+    readDataLocalStorage("menu-selected") || "hamburguer";
+  const category = selectedCategory(categorywillgenerate);
+  clearDiv("box-menu");
+  category.forEach((data) => {
+    generateCardsMenu(data);
+  });
+  changestate(categorywillgenerate);
 };

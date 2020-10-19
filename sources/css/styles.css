@@ -431,6 +431,8 @@
 }
 
 .card-title {
+  text-align: center;
+  width: 75%;
   margin: 5px 0px;
   font-size: 18px;
   font-weight: 600;

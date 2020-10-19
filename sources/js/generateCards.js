@@ -39,7 +39,7 @@ const generateCardsMenu = (data) => {
             <img class="img-card" src="${data.img}" />
             <div class="card-price">
               <p class="card-price-p">
-                ${data.price}
+                $${data.price}
               </p>
             </div>
           </div>
