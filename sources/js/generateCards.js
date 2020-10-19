@@ -22,7 +22,6 @@ const generateCards = (data) => {
               </div>
             </div>
     `;
-
   document
     .getElementById("box-combos")
     .insertAdjacentHTML("beforeend", template);
@@ -34,7 +33,7 @@ const createList = (data) => {
 };
 
 const generateCardsMenu = (data) => {
-  const template = `
+  const cardmenu = `
         <div class="card-scafold">
           <div class="card-picture">
             <img class="img-card" src="${data.img}" />
@@ -53,7 +52,7 @@ const generateCardsMenu = (data) => {
           </div>
         </div>
     `;
-  document.getElementById("box-menu").insertAdjacentHTML("beforeend", template);
+  document.getElementById("box-menu").insertAdjacentHTML("beforeend", cardmenu);
 };
 
-export { generateCards };
+export { generateCards, generateCardsMenu };

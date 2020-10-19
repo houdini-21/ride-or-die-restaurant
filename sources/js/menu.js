@@ -401,3 +401,5 @@ const snacks = [
     id: "snack6",
   },
 ];
+
+export { hamburguer, pizza, chicken, meat, snacks, drink, salad, hotdog };
