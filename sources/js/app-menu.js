@@ -70,12 +70,22 @@ const clearDiv = (id) => {
 };
 
 const updatecards = () => {
+  const loader = document.getElementById("loader");
+  const titlecategory = document.getElementById("title-category");
   const categorywillgenerate =
     readDataLocalStorage("menu-selected") || "hamburguer";
   const category = selectedCategory(categorywillgenerate);
+
   clearDiv("box-menu");
-  category.forEach((data) => {
-    generateCardsMenu(data);
-  });
+  loader.classList.remove("hidden");
+  titlecategory.classList.add("hidden");
+  setTimeout(() => {
+    loader.classList.add("hidden");
+    titlecategory.classList.remove("hidden");
+    category.forEach((data) => {
+      generateCardsMenu(data);
+    });
+  }, 3000);
+
   changestate(categorywillgenerate);
 };

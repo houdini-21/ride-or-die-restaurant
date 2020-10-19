@@ -339,6 +339,10 @@
 }
 
 .menu-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   margin: 40px 0px;
 }
 
@@ -465,4 +469,26 @@
   cursor: pointer;
   margin: 15px 0px;
   align-self: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.loader {
+  border: 16px solid var(--secondary-color); 
+  border-top: 16px solid #20bea1; 
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
