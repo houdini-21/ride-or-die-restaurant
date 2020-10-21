@@ -6,6 +6,10 @@
   --third-color: #151515;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -80,7 +84,8 @@
   width: 30px;
 }
 
-.navbar a:hover {
+.navbar a:hover,
+a.btn-nav-active {
   background-color: var(--secondary-color);
   color: var(--third-color);
 }
@@ -203,7 +208,9 @@
   display: block;
   filter: brightness(0) invert(1);
 }
-
+.card-icon-category:hover {
+  cursor: pointer;
+}
 .card-icon-category:hover,
 .active {
   background-color: #0e181a !important;
@@ -386,8 +393,16 @@
   flex-direction: column;
 }
 
+.card-scafold-combos {
+  width: 330px;
+  box-shadow: 0px 20px 30px rgba(141, 139, 139, 0.3);
+  border-radius: 10px;
+  margin: 15px;
+}
+
 .card-scafold {
   width: 330px;
+  height: 430px;
   box-shadow: 0px 20px 30px rgba(141, 139, 139, 0.3);
   border-radius: 10px;
   margin: 15px;
@@ -436,7 +451,6 @@
 
 .card-title {
   text-align: center;
-  width: 75%;
   margin: 5px 0px;
   font-size: 18px;
   font-weight: 600;
@@ -476,8 +490,8 @@
 }
 
 .loader {
-  border: 16px solid var(--secondary-color); 
-  border-top: 16px solid #20bea1; 
+  border: 16px solid var(--secondary-color);
+  border-top: 16px solid #20bea1;
   border-radius: 50%;
   width: 120px;
   height: 120px;

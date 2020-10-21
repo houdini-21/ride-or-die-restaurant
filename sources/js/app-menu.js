@@ -13,6 +13,7 @@ import { readDataLocalStorage, saveDataLocalStorage } from "./localstorage.js";
 
 window.addEventListener("load", () => {
   updatecards();
+  saveDataLocalStorage("x");
 });
 
 const cardscategory = document.querySelectorAll(".card-icon-category");
@@ -72,8 +73,7 @@ const clearDiv = (id) => {
 const updatecards = () => {
   const loader = document.getElementById("loader");
   const titlecategory = document.getElementById("title-category");
-  const categorywillgenerate =
-    readDataLocalStorage("menu-selected") || "hamburguer";
+  const categorywillgenerate = readDataLocalStorage("menu-selected");
   const category = selectedCategory(categorywillgenerate);
 
   clearDiv("box-menu");

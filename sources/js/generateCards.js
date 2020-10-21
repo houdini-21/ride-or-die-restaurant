@@ -1,7 +1,7 @@
 const generateCards = (data) => {
   let listdata = data.include;
   const template = `
-            <div class="card-scafold">
+            <div class="card-scafold-combos">
               <div class="card-picture">
                 <img class="img-card" src="${data.img}" />
                 <div class="card-price">
