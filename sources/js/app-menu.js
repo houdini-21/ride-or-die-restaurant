@@ -1,15 +1,6 @@
 import { generateCardsMenu } from "./generateCards.js";
-import {
-  hamburguer,
-  pizza,
-  chicken,
-  meat,
-  snacks,
-  drink,
-  salad,
-  hotdog,
-} from "./menu.js";
 import { readDataLocalStorage, saveDataLocalStorage } from "./localstorage.js";
+import './menu.js'
 
 window.addEventListener("load", () => {
   updatecards();
@@ -82,9 +73,6 @@ const updatecards = () => {
   setTimeout(() => {
     loader.classList.add("hidden");
     titlecategory.classList.remove("hidden");
-    category.forEach((data) => {
-      generateCardsMenu(data);
-    });
   }, 3000);
 
   changestate(categorywillgenerate);
