@@ -8,34 +8,50 @@ import {
   Salad,
   Hotdog,
 } from "./Menuclass.js";
-let array = [];
+
+let Hamburguermenu = [];
+let Pizzamenu = [];
+let Chickenmenu = [];
+let Meatmenu = [];
+let Snacksmenu = [];
+let Drinkmenu = [];
+let Saladmenu = [];
+let Hotdogmenu = [];
+
 const createDish = (title, img, description, price, id, category) => {
+  let dish = "";
   switch (category) {
     case "hamburguer":
-      let plato = new Hamburguer(title, img, description, price, id);
-      array.push(plato);
-      return;
+      dish = new Hamburguer(title, img, description, price, id);
+      Hamburguermenu.push(dish);
       break;
     case "pizza":
-      return new Pizza(title, img, description, price, id);
+      dish = new Pizza(title, img, description, price, id);
+      Pizzamenu.push(dish);
       break;
     case "chicken":
-      return new Chicken(title, img, description, price, id);
+      dish = new Chicken(title, img, description, price, id);
+      Chickenmenu.push(dish);
       break;
     case "meat":
-      return new Meat(title, img, description, price, id);
+      dish = new Meat(title, img, description, price, id);
+      Meatmenu.push(dish);
       break;
     case "snacks":
-      return new Snacks(title, img, description, price, id);
+      dish = new Snacks(title, img, description, price, id);
+      Snacksmenu.push(dish);
       break;
     case "drink":
-      return new Drink(title, img, description, price, id);
+      dish = new Drink(title, img, description, price, id);
+      Drinkmenu.push(dish);
       break;
     case "salad":
-      return new Salad(title, img, description, price, id);
+      dish = new Salad(title, img, description, price, id);
+      Saladmenu.push(dish);
       break;
     case "hotdog":
-      return new Hotdog(title, img, description, price, id);
+      dish = new Hotdog(title, img, description, price, id);
+      Hotdogmenu.push(dish);
       break;
   }
 };
@@ -52,7 +68,6 @@ const burguer1 = createDish(
 const burguer2 = createDish(
   "Hamburguesa doble de carne",
   "./sources/img/burguer/burguer-2.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "3.50",
   "burguer2",
@@ -62,7 +77,6 @@ const burguer2 = createDish(
 const burguer3 = createDish(
   "Hamburguesa con doble carne y tocino",
   "./sources/img/burguer/burguer-3.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "4.50",
   "burguer3",
@@ -72,7 +86,6 @@ const burguer3 = createDish(
 const burguer4 = createDish(
   "Hamburguesa con triple carne,queso y tocino",
   "./sources/img/burguer/burguer-4.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "5.50",
   "burguer4",
@@ -81,7 +94,6 @@ const burguer4 = createDish(
 const burguer5 = createDish(
   "Hamburguesa de pollo y tocino",
   "./sources/img/burguer/burguer-5.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "4.50",
   "burguer5",
@@ -90,7 +102,6 @@ const burguer5 = createDish(
 const burguer6 = createDish(
   "Hamburguesa con tocino",
   "./sources/img/burguer/burguer-6.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "2.00",
   "burguer6",
@@ -100,7 +111,6 @@ const burguer6 = createDish(
 const pizza1 = createDish(
   "Pizza de pollo",
   "./sources/img/pizza/pizza-1.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "7.50",
   "pizza1",
@@ -110,7 +120,6 @@ const pizza1 = createDish(
 const pizza2 = createDish(
   "Pizza extra queso",
   "./sources/img/pizza/pizza-2.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "9.50",
   "pizza2",
@@ -119,7 +128,6 @@ const pizza2 = createDish(
 const pizza3 = createDish(
   "Pizza corriente",
   "./sources/img/pizza/pizza-3.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "5.50",
   "pizza3",
@@ -128,7 +136,6 @@ const pizza3 = createDish(
 const pizza4 = createDish(
   "Pizza extra queso y huevo",
   "./sources/img/pizza/pizza-4.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "6.50",
   "pizza4",
@@ -137,7 +144,6 @@ const pizza4 = createDish(
 const pizza5 = createDish(
   "Pizza con carne",
   "./sources/img/pizza/pizza-5.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "7.50",
   "pizza5",
@@ -146,7 +152,6 @@ const pizza5 = createDish(
 const pizza6 = createDish(
   "Pizza carnaval",
   "./sources/img/pizza/pizza-6.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "9.50",
   "pizza6",
@@ -156,7 +161,6 @@ const pizza6 = createDish(
 const pollo1 = createDish(
   "Alitas de pollo frito",
   "./sources/img/friedchicken/friedChicken-1.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "4.50",
   "chicken1",
@@ -165,7 +169,6 @@ const pollo1 = createDish(
 const pollo2 = createDish(
   "Pollo relleno de jamon y queso",
   "./sources/img/friedchicken/friedChicken-2.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "6.50",
   "chicken2",
@@ -174,7 +177,6 @@ const pollo2 = createDish(
 const pollo3 = createDish(
   "Pollo Picante",
   "./sources/img/friedchicken/friedChicken-3.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "3.50",
   "chicken3",
@@ -183,7 +185,6 @@ const pollo3 = createDish(
 const pollo4 = createDish(
   "Pollo frito de la casa",
   "./sources/img/friedchicken/friedChicken-4.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "5.50",
   "chicken4",
@@ -192,7 +193,6 @@ const pollo4 = createDish(
 const pollo5 = createDish(
   "Pollo empanizado especial",
   "./sources/img/friedchicken/friedChicken-5.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "7.50",
   "chicken5",
@@ -201,7 +201,6 @@ const pollo5 = createDish(
 const pollo6 = createDish(
   "Pechuga empanizada",
   "./sources/img/friedchicken/friedChicken-6.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "4.50",
   "chicken6",
@@ -211,7 +210,6 @@ const pollo6 = createDish(
 const hotdog1 = createDish(
   "Mini Hotdog",
   "./sources/img/hotdogs/hotdog-1.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "4.50",
   "hotdog1",
@@ -220,7 +218,6 @@ const hotdog1 = createDish(
 const hotdog2 = createDish(
   "Hotdog con salchicha picante",
   "./sources/img/hotdogs/hotdog-2.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "3.50",
   "hotdog2",
@@ -229,7 +226,6 @@ const hotdog2 = createDish(
 const hotdog3 = createDish(
   "Hotdog vegetariano",
   "./sources/img/hotdogs/hotdog-3.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "2.50",
   "hotdog3",
@@ -238,16 +234,14 @@ const hotdog3 = createDish(
 const hotdog4 = createDish(
   "Hotdog estadounidense",
   "./sources/img/hotdogs/hotdog-4.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "3.50",
   "hotdog4",
   "hotdog"
 );
 const hotdog5 = createDish(
-  "Hotdog con pan salchicha de pavo",
+  "Hotdog con salchicha de pavo",
   "./sources/img/hotdogs/hotdog-5.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "3.50",
   "hotdog5",
@@ -256,7 +250,6 @@ const hotdog5 = createDish(
 const hotdog6 = createDish(
   "Hotdog",
   "./sources/img/hotdogs/hotdog-6.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "1.50",
   "hotdog6",
@@ -266,7 +259,6 @@ const hotdog6 = createDish(
 const meat1 = createDish(
   "Carne a la BBQ",
   "./sources/img/meat/meat-1.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "4.50",
   "meat1",
@@ -275,7 +267,6 @@ const meat1 = createDish(
 const meat2 = createDish(
   "Carne con papas",
   "./sources/img/meat/meat-2.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "4.50",
   "meat2",
@@ -284,7 +275,6 @@ const meat2 = createDish(
 const meat3 = createDish(
   "Carne con jalea de fresa",
   "./sources/img/meat/meat-3.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "5.50",
   "meat3",
@@ -293,7 +283,6 @@ const meat3 = createDish(
 const meat4 = createDish(
   "Carne asada",
   "./sources/img/meat/meat-4.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "4.50",
   "meat4",
@@ -302,7 +291,6 @@ const meat4 = createDish(
 const meat5 = createDish(
   "Filetes con adereso ride",
   "./sources/img/meat/meat-5.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "4.50",
   "meat5",
@@ -311,7 +299,6 @@ const meat5 = createDish(
 const meat6 = createDish(
   "Carne ride or die",
   "./sources/img/meat/meat-6.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "4.50",
   "meat6",
@@ -321,7 +308,6 @@ const meat6 = createDish(
 const salad1 = createDish(
   "Ensalada con queso y mandarina",
   "./sources/img/salad/salad-1.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "4.50",
   "salad1",
@@ -330,7 +316,6 @@ const salad1 = createDish(
 const salad2 = createDish(
   "Ensalada college",
   "./sources/img/salad/salad-2.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "3.50",
   "salad2",
@@ -339,7 +324,6 @@ const salad2 = createDish(
 const salad3 = createDish(
   "Ensalada petite",
   "./sources/img/salad/salad-3.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "2.50",
   "salad3",
@@ -348,7 +332,6 @@ const salad3 = createDish(
 const salad4 = createDish(
   "Ensalada extra light",
   "./sources/img/salad/salad-4.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "3.50",
   "salad4",
@@ -357,7 +340,6 @@ const salad4 = createDish(
 const salad5 = createDish(
   "Ensalada con esparragos",
   "./sources/img/salad/salad-5.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "4.50",
   "salad5",
@@ -366,7 +348,6 @@ const salad5 = createDish(
 const salad6 = createDish(
   "Ensalada con remolacha",
   "./sources/img/salad/salad-6.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "3.50",
   "salad6",
@@ -376,7 +357,6 @@ const salad6 = createDish(
 const drink1 = createDish(
   "Soda natural de frutas",
   "./sources/img/drink/drink-1.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "2.00",
   "drink1",
@@ -385,7 +365,6 @@ const drink1 = createDish(
 const drink2 = createDish(
   "Limonada",
   "./sources/img/drink/drink-2.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "0.75",
   "drink2"
@@ -393,7 +372,6 @@ const drink2 = createDish(
 const drink3 = createDish(
   "Batidos",
   "./sources/img/drink/drink-3.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "1.50",
   "drink3",
@@ -402,7 +380,6 @@ const drink3 = createDish(
 const drink4 = createDish(
   "Te de durazno",
   "./sources/img/drink/drink-4.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "1.25",
   "drink4",
@@ -411,7 +388,6 @@ const drink4 = createDish(
 const drink5 = createDish(
   "Cafe faster die",
   "./sources/img/drink/drink-5.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "1.35",
   "drink5",
@@ -420,7 +396,6 @@ const drink5 = createDish(
 const drink6 = createDish(
   "Coca lata",
   "./sources/img/drink/drink-6.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "1.00",
   "drink6",
@@ -430,7 +405,6 @@ const drink6 = createDish(
 const snacks1 = createDish(
   "Palomitas de maiz",
   "./sources/img/snack/snack-1.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "1.50",
   "snack1",
@@ -440,7 +414,6 @@ const snacks1 = createDish(
 const snack2 = createDish(
   "cracks",
   "./sources/img/snack/snack-2.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "0.50",
   "snack2",
@@ -450,7 +423,6 @@ const snack2 = createDish(
 const snack3 = createDish(
   "Estrellas ninjas",
   "./sources/img/snack/snack-3.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "0.50",
   "snack3",
@@ -459,7 +431,6 @@ const snack3 = createDish(
 const snack4 = createDish(
   "Donas",
   "./sources/img/snack/snack-4.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "0.50",
   "snack4",
@@ -468,7 +439,6 @@ const snack4 = createDish(
 const snack5 = createDish(
   "Oreo cookies",
   "./sources/img/snack/snack-5.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "0.50",
   "snack5",
@@ -478,10 +448,10 @@ const snack5 = createDish(
 const snack6 = createDish(
   "Pastel de chocolate",
   "./sources/img/snack/snack-6.jpg",
-
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
   "7.50",
   "snack6",
   "snacks"
 );
 
+export{Hamburguermenu, Pizzamenu, Chickenmenu, Drinkmenu, Meatmenu, Snacksmenu, Saladmenu, Hotdogmenu}

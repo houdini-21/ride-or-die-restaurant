@@ -1,6 +1,15 @@
 import { generateCardsMenu } from "./generateCards.js";
 import { readDataLocalStorage, saveDataLocalStorage } from "./localstorage.js";
-import './menu.js'
+import {
+  Hamburguermenu,
+  Pizzamenu,
+  Chickenmenu,
+  Meatmenu,
+  Drinkmenu,
+  Snacksmenu,
+  Hotdogmenu,
+  Saladmenu,
+} from "./menu.js";
 
 window.addEventListener("load", () => {
   updatecards();
@@ -20,28 +29,28 @@ const selectedCategory = (category) => {
   let option = "hamburguer";
   switch (category) {
     case "hamburguer":
-      option = hamburguer;
+      option = Hamburguermenu;
       break;
     case "pizza":
-      option = pizza;
+      option = Pizzamenu;
       break;
     case "chicken":
-      option = chicken;
+      option = Chickenmenu;
       break;
     case "meat":
-      option = meat;
+      option = Meatmenu;
       break;
     case "snacks":
-      option = snacks;
+      option = Snacksmenu;
       break;
     case "drink":
-      option = drink;
+      option = Drinkmenu;
       break;
     case "salad":
-      option = salad;
+      option = Saladmenu;
       break;
     case "hotdog":
-      option = hotdog;
+      option = Hotdogmenu;
       break;
   }
   return option;
@@ -65,15 +74,25 @@ const updatecards = () => {
   const loader = document.getElementById("loader");
   const titlecategory = document.getElementById("title-category");
   const categorywillgenerate = readDataLocalStorage("menu-selected");
+  const titlemenu = document.getElementById("title-menu-cards");
+  const subtitlemenu = document.getElementById("subtitle-menu-cards");
   const category = selectedCategory(categorywillgenerate);
-
   clearDiv("box-menu");
+
+    category[0].addCar()
+
+    subtitlemenu.innerText = `The Best of the ${categorywillgenerate} category`;
+  titlemenu.innerText = `Menu ${categorywillgenerate}`;
   loader.classList.remove("hidden");
   titlecategory.classList.add("hidden");
+
   setTimeout(() => {
     loader.classList.add("hidden");
     titlecategory.classList.remove("hidden");
-  }, 3000);
+    category.forEach((data) => {
+      generateCardsMenu(data);
+    });
+  }, 1500);
 
   changestate(categorywillgenerate);
 };

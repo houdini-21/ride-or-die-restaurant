@@ -3,6 +3,16 @@ import { generateCards } from "./generateCards.js";
 import { saveDataLocalStorage } from "./localstorage.js";
 
 const cardscategory = document.querySelectorAll(".card-icon-category");
+const shoppingcart = document.getElementById("shopping-cart-div");
+const closetag = document.getElementById("closetag");
+
+shoppingcart.addEventListener("click", () => {
+  document.getElementById("shopping-cart-details").style.width = "350px";
+});
+
+closetag.addEventListener("click", () => {
+  document.getElementById("shopping-cart-details").style.width = "0px";
+});
 
 document.getElementById("viewmenu").addEventListener("click", () => {
   window.location = "./menu.html";

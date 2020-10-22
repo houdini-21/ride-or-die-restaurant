@@ -14,56 +14,48 @@ class Food {
 
 class Hamburguer extends Food {
   constructor(title, img, description, price, id) {
-    console.log("creamdo");
     super(title, img, description, price, id);
   }
 }
 
 class Pizza extends Food {
   constructor(title, img, description, price, id) {
-    console.log("creamdo");
     super(title, img, description, price, id);
   }
 }
 
 class Chicken extends Food {
   constructor(title, img, description, price, id) {
-    console.log("creamdo");
     super(title, img, description, price, id);
   }
 }
 
 class Meat extends Food {
   constructor(title, img, description, price, id) {
-    console.log("creamdo");
     super(title, img, description, price, id);
   }
 }
 
 class Snacks extends Food {
   constructor(title, img, description, price, id) {
-    console.log("creamdo");
     super(title, img, description, price, id);
   }
 }
 
 class Drink extends Food {
   constructor(title, img, description, price, id) {
-    console.log("creamdo");
     super(title, img, description, price, id);
   }
 }
 
 class Salad extends Food {
   constructor(title, img, description, price, id) {
-    console.log("creamdo");
     super(title, img, description, price, id);
   }
 }
 
 class Hotdog extends Food {
   constructor(title, img, description, price, id) {
-    console.log("creamdo");
     super(title, img, description, price, id);
   }
 }
