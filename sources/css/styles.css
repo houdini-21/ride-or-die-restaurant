@@ -67,8 +67,8 @@ html {
   bottom: 0;
   right: 0;
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   border-radius: 100%;
   background-color: #20bea1;
 }
@@ -81,7 +81,7 @@ html {
 
 .quantity-cart-num {
   font-weight: 600;
-  font-size: 15px;
+  font-size: 13px;
   color: var(--secondary-color);
 }
 
@@ -140,6 +140,7 @@ html {
   width: 300px;
   box-shadow: 0px 20px 30px rgba(141, 139, 139, 0.3);
   border-radius: 10px;
+  margin: 20px 0px 20px 0px;
 }
 
 .card-details-title {
@@ -186,7 +187,7 @@ html {
 .card-details-quantity {
   display: flex;
   flex-direction: row;
-  width: 57%;
+  width: 124px;
 }
 
 .card-details-quantity {

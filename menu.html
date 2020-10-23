@@ -18,15 +18,15 @@
         <img class="logo" src="./sources/img/logo.png" />
         <div class="navbar-items">
           <a href="/">Inicio</a>
-          <a href="#" class="btn-nav-active">Categorias</a>
+          <a href="/menu.html" class="btn-nav-active">Categorias</a>
           <a href="/#combos">Combos</a>
-          <div class="shopping-cart-div">
+          <div class="shopping-cart-div" id="shopping-cart-div">
             <img
               src="./sources/icons/svg/shopping-cart.svg"
               class="shopping-cart"
             />
             <div class="quantity-cart">
-              <p class="quantity-cart-num">0</p>
+              <p class="quantity-cart-num" id="quantity-cart-num">0</p>
             </div>
           </div>
         </div>
@@ -37,6 +37,25 @@
       <h2 class="banner-menu-title">Menu</h2>
     </section>
 
+    <div class="shopping-cart-details" id="shopping-cart-details">
+      <div class="container-details-food">
+        <div class="exit-btn" id="closetag">
+          <img
+            class="btn-close-details-food"
+            src="./sources/icons/cancel.svg"
+          />
+        </div>
+        <div class="principal-container-details-food">
+          <h3 class="title-details">Ordenes</h3>
+          <div class="container-dish" id="container-dish"></div>
+          <br />
+          <div class="card-details-total">
+            <h3 class="card-details-total-p">TOTAL:</h3>
+            <h3 class="card-details-total-price">$30</h3>
+          </div>
+        </div>
+      </div>
+    </div>
     <section class="container-category-combos">
       <h2 class="title-category">Categorias</h2>
 
@@ -166,8 +185,7 @@
       <div class="loader" id="loader"></div>
       <div class="menu-title" id="title-category">
         <h4 class="menu-title-category" id="title-menu-cards"></h4>
-        <h2 class="menu-title-description" id='subtitle-menu-cards' >
-        </h2>
+        <h2 class="menu-title-description" id="subtitle-menu-cards"></h2>
       </div>
       <div class="menu-cards-box" id="box-menu"></div>
     </section>

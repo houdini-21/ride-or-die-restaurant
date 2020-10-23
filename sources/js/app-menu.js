@@ -10,10 +10,13 @@ import {
   Hotdogmenu,
   Saladmenu,
 } from "./menu.js";
+import { createFunctionalBtn, generatecardcar } from "./addFoodCart.js";
+import './btnOpenCar.js'
 
 window.addEventListener("load", () => {
   saveDataLocalStorage("menu-selected", "hamburguer");
   updatecards();
+  generatecardcar();
 });
 
 const cardscategory = document.querySelectorAll(".card-icon-category");
@@ -83,14 +86,15 @@ const updatecards = () => {
   titlemenu.innerText = `Menu ${categorywillgenerate}`;
   loader.classList.remove("hidden");
   titlecategory.classList.add("hidden");
-
+  let datastorage = "menu-" + categorywillgenerate;
+  saveDataLocalStorage(datastorage, category);
   setTimeout(() => {
     loader.classList.add("hidden");
     titlecategory.classList.remove("hidden");
     category.forEach((data) => {
       generateCardsMenu(data);
     });
+    createFunctionalBtn(datastorage);
   }, 1500);
-
   changestate(categorywillgenerate);
 };
