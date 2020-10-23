@@ -12,8 +12,8 @@ import {
 } from "./menu.js";
 
 window.addEventListener("load", () => {
+  saveDataLocalStorage("menu-selected", "hamburguer");
   updatecards();
-  saveDataLocalStorage("x");
 });
 
 const cardscategory = document.querySelectorAll(".card-icon-category");
@@ -79,9 +79,7 @@ const updatecards = () => {
   const category = selectedCategory(categorywillgenerate);
   clearDiv("box-menu");
 
-    category[0].addCar()
-
-    subtitlemenu.innerText = `The Best of the ${categorywillgenerate} category`;
+  subtitlemenu.innerText = `The Best of the ${categorywillgenerate} category`;
   titlemenu.innerText = `Menu ${categorywillgenerate}`;
   loader.classList.remove("hidden");
   titlecategory.classList.add("hidden");

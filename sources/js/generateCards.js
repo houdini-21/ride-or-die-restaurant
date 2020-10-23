@@ -1,24 +1,24 @@
 const generateCards = (data) => {
-  let listdata = data.include;
+  let listdata = data._include;
   const template = `
             <div class="card-scafold-combos">
               <div class="card-picture">
-                <img class="img-card" src="${data.img}" />
+                <img class="img-card" src="${data._img}" />
                 <div class="card-price">
                   <p class="card-price-p">
-                    $${data.price}
+                    $${data._price}
                   </p>
                 </div>
               </div>
               <div class="card-info">
-                <h4 class="card-title">${data.title}</h4>
+                <h4 class="card-title">${data._title}</h4>
                 <p class="card-description">
-                ${data.description}
+                ${data._description}
                 </p>
                 <ul id="list-include">
                 ${listdata.map((li) => createList(li)).join(" ")}
                 </ul>
-                <button class="card-btn-add-car">Agregar al carrito</button>
+                <button class="card-btn-add-car" id='${data._id}'>Agregar al carrito</button>
               </div>
             </div>
     `;
