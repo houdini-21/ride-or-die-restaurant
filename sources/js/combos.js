@@ -6,7 +6,7 @@ let combos = [
     "./sources/img/combo-5.jpg",
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
     ["2-Hamburguesas", "2-Ensaladas", "2-Papas fritas", "2-Jugos de naranja"],
-    "4.50",
+    "9.50",
     "cb2p"
   ),
 
@@ -15,7 +15,7 @@ let combos = [
     "./sources/img/combo-1.jpg",
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
     ["3-Hamburguesas", "3-Bebidas", "3-Papas fritas", "3-Banana split"],
-    "4.50",
+    "14.00",
     "cb3p"
   ),
 
@@ -24,7 +24,7 @@ let combos = [
     "./sources/img/combo-2.jpg",
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
     ["4-Pizza Gigante", "2-Litros de soda", "1-Orden pan con ajo", "4-Paletas"],
-    "4.50",
+    "20.50",
     "cb4p"
   ),
 
@@ -33,7 +33,7 @@ let combos = [
     "./sources/img/combo-6.jpg",
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
     ["5-Hamburguesas", "2-Litros de soda", "5-Papas fritas", "4-Batidos"],
-    "4.50",
+    "23.00",
     "cb6p"
   ),
 
@@ -42,7 +42,7 @@ let combos = [
     "./sources/img/combo-3.jpg",
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id enim quis mi euismod eleifend.",
     ["8-Hamburguesas", "8-Bebidas", "8-Papas fritas", "8-Banana split"],
-    "4.50",
+    "29.75",
     "cb8p"
   ),
 
@@ -56,7 +56,7 @@ let combos = [
       "15-Ensaladas de papa",
       "12-Sorbete de Vainilla",
     ],
-    "4.50",
+    "35.50",
     "cb12p"
   ),
 ];

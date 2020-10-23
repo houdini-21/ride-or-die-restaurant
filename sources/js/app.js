@@ -1,11 +1,16 @@
 import { combos } from "./combos.js";
 import { generateCards } from "./generateCards.js";
 import { saveDataLocalStorage } from "./localstorage.js";
-import { createFunctionalBtn, generatecardcar } from "./addFoodCart.js";
-import './btnOpenCar.js'
+import {
+  createFunctionalBtn,
+  generatecardcar,
+  generatebtnDelete,
+} from "./addFoodCart.js";
+import "./btnOpenCar.js";
 
 window.addEventListener("load", () => {
   generatecardcar();
+  generatebtnDelete();
 });
 
 const cardscategory = document.querySelectorAll(".card-icon-category");

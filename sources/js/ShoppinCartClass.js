@@ -8,15 +8,19 @@ class Shoppingcart {
   addFood(dish) {
     this._food.push(dish);
     saveDataLocalStorage("shopping-cart", this._food);
+    this.calculePrice();
   }
 
   deleteFood(iddish) {
     this._food.splice(iddish, 1);
     saveDataLocalStorage("shopping-cart", this._food);
+    this.calculePrice();
   }
 
   calculePrice() {
-    //reduce
+    let arrayFood = this._food;
+    let price = arrayFood.reduce((acc, el) => acc + parseFloat(el._price), 0);
+    document.getElementById("total-price-cart").innerText = `$ ${price}`;
   }
 }
 

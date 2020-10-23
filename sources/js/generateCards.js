@@ -56,7 +56,7 @@ const generateCardsMenu = (data) => {
     `;
   document.getElementById("box-menu").insertAdjacentHTML("beforeend", cardmenu);
 };
-
+let cardsGenerated = "";
 const generateCardsforShoppingCart = (data) => {
   const template = `
               <div class="card-details-shopping-cart">
@@ -64,28 +64,19 @@ const generateCardsforShoppingCart = (data) => {
                   <img
                     class="img-details"
                     src="${data._img}"
-                    alt=""
                   />
-                </div>
+                <div class="card-delete-food" id="delete-food">
+                  <img class="delete-food" src='./sources/icons/trash.svg'/>
+                </div> 
+            </div>
                 <div class="class-price-title">
                   <div class="card-detail-order">
                     <h4 class="card-details-title">
                     ${data._title}
                     </h4>
-                    <div class="card-details-quantity">
-                      <button type="button" class="card-detail-btn-minus">
-                        -
-                      </button>
-                      <input
-                        class="quantity-dish"
-                        value="0"
-                        type="text"
-                        disabled="disabled"
-                      />
-                      <button type="button" class="card-detail-btn-add">
-                        +
-                      </button>
-                    </div>
+                    <p class='card-detail-description'>
+                    ${data._description}
+                    </p>
                   </div>
                   <h4 class="card-details-price">
                   $${data._price}

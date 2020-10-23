@@ -72,6 +72,7 @@ html {
   border-radius: 100%;
   background-color: #20bea1;
 }
+
 .title-details {
   font-size: 20px;
   font-weight: 400;
@@ -103,12 +104,10 @@ html {
   padding-top: 60px;
 }
 
-.shopping-cart-details .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+.card-detail-description {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--third-color);
 }
 
 .container-details-food {
@@ -136,66 +135,18 @@ html {
   align-items: center;
   flex-direction: column;
 }
+
 .card-details-shopping-cart {
   width: 300px;
   box-shadow: 0px 20px 30px rgba(141, 139, 139, 0.3);
   border-radius: 10px;
-  margin: 20px 0px 20px 0px;
+  margin: 30px 0px 0px 0px;
 }
 
 .card-details-title {
   font-size: 15px;
   font-weight: 500;
   color: var(--third-color);
-}
-.card-details-price {
-  font-size: 20px;
-  font-weight: 700;
-  color: #20bea1;
-}
-.card-details-add {
-  border-radius: 5px 0px 0px 5px;
-}
-
-.card-details-minus {
-  border-radius: 0px 5px 5px 0px;
-}
-
-.card-detail-btn-add,
-.card-detail-btn-minus {
-  width: 40px;
-  height: 40px;
-  background-color: var(--principal-color);
-  color: var(--secondary-color);
-  font-size: 19px;
-  border: none;
-  cursor: pointer;
-}
-
-.quantity-dish {
-  margin: 0;
-  outline: none;
-  text-align: center;
-  width: 40px;
-  height: 40px;
-  background-color: #fafafa;
-  border: 0;
-  font-size: 18px;
-  font-weight: 400;
-}
-
-.card-details-quantity {
-  display: flex;
-  flex-direction: row;
-  width: 124px;
-}
-
-.card-details-quantity {
-  border: 2px solid var(--principal-color);
-  box-sizing: border-box;
-  background-color: var(--secondary-color);
-  border-radius: 7px;
-  margin: 10px 0px 20px 0px;
 }
 
 .img-details {
@@ -206,16 +157,26 @@ html {
 }
 
 .card-details-total {
+  height: 125px;
+}
+
+.card-details-total {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
+
 .class-price-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   width: 90%;
+}
+
+.class-price-title {
+  width: 90%;
+  margin: 10px 0px 10px 0px;
 }
 
 .navbar a:hover,
@@ -240,6 +201,7 @@ a.btn-nav-active {
   font-size: 25px;
   font-weight: 700;
   color: var(--principal-color);
+  margin-top: -70px;
 }
 
 .banner-principal {
@@ -328,7 +290,13 @@ a.btn-nav-active {
   flex-wrap: wrap;
 }
 
-.card-category {
+.card-category,
+.about-name,
+.about-our-founder-box,
+.menu-box,
+.menu-title,
+.menu-card,
+.card-info {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -388,13 +356,6 @@ a.btn-nav-active {
 }
 
 .about-name {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.about-name {
   background-color: var(--principal-color);
   height: 300px;
 }
@@ -417,13 +378,6 @@ a.btn-nav-active {
   align-items: center;
   justify-content: center;
   flex-direction: row;
-}
-
-.about-our-founder-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
 
 .about-our-founder-box {
@@ -487,18 +441,7 @@ a.btn-nav-active {
 }
 
 .menu-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   margin: 40px 0px;
-}
-
-.menu-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
 
 .menu-title-category {
@@ -527,13 +470,6 @@ a.btn-nav-active {
   flex-wrap: wrap;
 }
 
-.menu-card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
 .card-scafold-combos {
   width: 330px;
   box-shadow: 0px 20px 30px rgba(141, 139, 139, 0.3);
@@ -556,11 +492,30 @@ a.btn-nav-active {
   border-radius: 10px 10px 0px 0px;
 }
 
-.card-picture {
+.card-picture,
+.card-delete-food {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+}
+
+.card-details-img {
+  position: relative;
+}
+
+.card-delete-food {
+  border-radius: 0px 10px 0px 10px;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  background-color: var(--principal-color);
+  right: 0;
+  top: 0;
+}
+
+.delete-food {
+  width: 28px;
 }
 
 .card-price {
@@ -568,7 +523,7 @@ a.btn-nav-active {
   padding: 10px 15px;
   background-color: #20bea1;
   position: absolute;
-  right: 0;
+  left: 0;
   bottom: 0;
 }
 
@@ -579,10 +534,6 @@ a.btn-nav-active {
 }
 
 .card-info {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   flex-wrap: wrap;
 }
 
