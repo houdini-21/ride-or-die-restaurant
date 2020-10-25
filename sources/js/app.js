@@ -4,13 +4,11 @@ import { saveDataLocalStorage } from "./localstorage.js";
 import {
   createFunctionalBtn,
   generatecardcar,
-  generatebtnDelete,
 } from "./addFoodCart.js";
 import "./btnOpenCar.js";
 
 window.addEventListener("load", () => {
   generatecardcar();
-  generatebtnDelete();
 });
 
 const cardscategory = document.querySelectorAll(".card-icon-category");

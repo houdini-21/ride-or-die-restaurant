@@ -22,12 +22,14 @@ const generatecardcar = () => {
 };
 
 const generatebtnDelete = () => {
-  const btnDeleteCart = document.querySelectorAll(".card-delete-food");
+  let btnDeleteCart = document.querySelectorAll(".card-delete-food");
   btnDeleteCart.forEach((btn, nArray) => {
     btn.addEventListener("click", () => {
       shoppingcar.deleteFood(nArray);
       clearDiv("container-dish");
-      generatecardcar();
+      setTimeout(() => {
+        generatecardcar();
+      }, 600);
     });
   });
 };
@@ -47,9 +49,8 @@ const createFunctionalBtn = (type) => {
       generateCardsforShoppingCart(dataLocalStorage[nArray]);
       shoppingcar.addFood(dataLocalStorage[nArray]);
       updateNumberCar();
-      generatebtnDelete();
     });
   });
 };
 
-export { createFunctionalBtn, generatecardcar, generatebtnDelete };
+export { createFunctionalBtn, generatecardcar };
