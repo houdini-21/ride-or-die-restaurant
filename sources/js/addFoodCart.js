@@ -1,6 +1,6 @@
-import { readDataLocalStorage } from "./localstorage.js";
-import { generateCardsforShoppingCart } from "./generateCards.js";
-import { Shoppingcart } from "./ShoppinCartClass.js";
+import { readDataLocalStorage } from './localstorage.js';
+import { generateCardsforShoppingCart } from './generateCards.js';
+import { Shoppingcart } from './ShoppinCartClass.js';
 
 let shoppingcar = new Shoppingcart();
 
@@ -12,7 +12,7 @@ const clearDiv = (id) => {
 };
 
 const generatecardcar = () => {
-  const car = JSON.parse(localStorage.getItem("shopping-cart")) || [];
+  const car = JSON.parse(localStorage.getItem('shopping-cart')) || [];
   car.forEach((data) => {
     generateCardsforShoppingCart(data);
   });
@@ -22,11 +22,11 @@ const generatecardcar = () => {
 };
 
 const generatebtnDelete = () => {
-  let btnDeleteCart = document.querySelectorAll(".card-delete-food");
+  let btnDeleteCart = document.querySelectorAll('.card-delete-food');
   btnDeleteCart.forEach((btn, nArray) => {
-    btn.addEventListener("click", () => {
+    btn.addEventListener('click', () => {
       shoppingcar.deleteFood(nArray);
-      clearDiv("container-dish");
+      clearDiv('container-dish');
       setTimeout(() => {
         generatecardcar();
       }, 600);
@@ -35,20 +35,22 @@ const generatebtnDelete = () => {
 };
 
 const updateNumberCar = () => {
-  const number = document.getElementById("quantity-cart-num");
-  const car = JSON.parse(localStorage.getItem("shopping-cart")).length;
-  number.innerText = car;
+  const number = document.getElementById('quantity-cart-num');
+  const car = JSON.parse(localStorage.getItem('shopping-cart'));
+    console.log(car.length)
+  car ? (number.innerText = car.length) : (number.innerText = '0');
 };
 
 const createFunctionalBtn = (type) => {
-  const btnAddCart = document.querySelectorAll(".card-btn-add-car");
+  const btnAddCart = document.querySelectorAll('.card-btn-add-car');
   const dataLocalStorage = readDataLocalStorage(type);
 
   btnAddCart.forEach((btn, nArray) => {
-    btn.addEventListener("click", () => {
+    btn.addEventListener('click', () => {
       generateCardsforShoppingCart(dataLocalStorage[nArray]);
       shoppingcar.addFood(dataLocalStorage[nArray]);
       updateNumberCar();
+      location.reload();
     });
   });
 };
